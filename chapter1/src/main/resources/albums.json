@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Fetty Wap",
+    "artistId": 6,
+    "cover": "https://api.deezer.com/album/11227614/image",
+    "coverSmall": "https://e-cdns-images.dzcdn.net/images/cover/f14becbb0d888cd5457d18d3bb670731/56x56-000000-80-0-0.jpg",
+    "coverMedium": "https://e-cdns-images.dzcdn.net/images/cover/f14becbb0d888cd5457d18d3bb670731/250x250-000000-80-0-0.jpg",
+    "coverBig": "https://e-cdns-images.dzcdn.net/images/cover/f14becbb0d888cd5457d18d3bb670731/500x500-000000-80-0-0.jpg",
+    "coverXl": "https://e-cdns-images.dzcdn.net/images/cover/f14becbb0d888cd5457d18d3bb670731/1000x1000-000000-80-0-0.jpg"
+  },
+  {
+    "id": 2,
+    "name": "The Way You Used To Do",
+    "artistId": 6,
+    "cover": "https://api.deezer.com/album/43044261/image",
+    "coverSmall": "https://e-cdns-images.dzcdn.net/images/cover/c060a47c41f01753ab8daee850f674d9/56x56-000000-80-0-0.jpg",
+    "coverMedium": "https://e-cdns-images.dzcdn.net/images/cover/c060a47c41f01753ab8daee850f674d9/250x250-000000-80-0-0.jpg",
+    "coverBig": "https://e-cdns-images.dzcdn.net/images/cover/c060a47c41f01753ab8daee850f674d9/500x500-000000-80-0-0.jpg",
+    "coverXl": "https://e-cdns-images.dzcdn.net/images/cover/c060a47c41f01753ab8daee850f674d9/1000x1000-000000-80-0-0.jpg"
+  },
+  {
+    "id": 3,
+    "name": "A Night At The Opera",
+    "artistId": 6,
+    "cover": "https://api.deezer.com/album/915786/image",
+    "coverSmall": "https://e-cdns-images.dzcdn.net/images/cover/201607ab9cd92a1f977659c7c524cadf/56x56-000000-80-0-0.jpg",
+    "coverMedium": "https://e-cdns-images.dzcdn.net/images/cover/201607ab9cd92a1f977659c7c524cadf/250x250-000000-80-0-0.jpg",
+    "coverBig": "https://e-cdns-images.dzcdn.net/images/cover/201607ab9cd92a1f977659c7c524cadf/500x500-000000-80-0-0.jpg",
+    "coverXl": "https://e-cdns-images.dzcdn.net/images/cover/201607ab9cd92a1f977659c7c524cadf/1000x1000-000000-80-0-0.jpg"
+  }
+]

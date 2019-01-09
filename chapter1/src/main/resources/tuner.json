@@ -1,0 +1,16 @@
+{
+  "stations": "/tuners/fm/stations",
+  "rpc": "/tuners/fm/rpc",
+  "radioText": {
+    "id": 1,
+    "albumId": 1,
+    "artistId": 6,
+    "title": "Trap Queen",
+    "duration": 222
+  },
+  "stationIndex": 0,
+  "station": {
+    "name": "98.2 Tauragės radijo",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/%22Taurag%C4%97s_radijo%22_logotipas.jpg/727px-%22Taurag%C4%97s_radijo%22_logotipas.jpg"
+  }
+}

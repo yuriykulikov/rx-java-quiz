@@ -1,2 +1,3 @@
 include ':quiz'
 include ':solutions'
+include ':chapter1'
