@@ -13,6 +13,7 @@ dependencies {
     compileOnly("org.immutables:builder:2.7.4")
     compileOnly("org.immutables:gson:2.7.4")
 
+    implementation("io.vavr:vavr:0.9.3")
     implementation("io.vertx:vertx-core:3.6.2")
     implementation("io.vertx:vertx-web-client:3.6.2")
     implementation("io.reactivex.rxjava2:rxjava:2.2.3")

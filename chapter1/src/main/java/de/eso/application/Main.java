@@ -2,40 +2,34 @@ package de.eso.application;
 
 import de.eso.api.RxPlayerApi;
 import de.eso.application.dto.TunerDto;
-import io.vertx.core.AbstractVerticle;
-import io.vertx.core.Future;
+import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpClient;
 import io.vertx.ext.web.client.WebClient;
 import java.util.function.Consumer;
 
-public class Main extends AbstractVerticle {
+public class Main {
   public static void main(String[] args) {
-    Runner.runExample(Main.class);
-  }
-
-  @Override
-  public void start(Future<Void> startFuture) {
-    WebClient webClient = WebClient.create(vertx);
-    HttpClient httpClient = this.vertx.createHttpClient();
+    Vertx vertx = Vertx.vertx();
+    HttpClient httpClient = vertx.createHttpClient();
+    WebClient webClient = WebClient.wrap(httpClient);
 
     RxPlayerApi rxPlayerApi = new RxPlayerApiImpl(httpClient, webClient);
-
     Consumer<TunerDto> listener1 =
         new Consumer<TunerDto>() {
           @Override
           public void accept(TunerDto tunerDto) {
-            System.out.println("listener callbacked with " + tunerDto);
+            System.out.println("listener1 callbacked with " + tunerDto);
           }
         };
     Consumer<TunerDto> listener2 =
         new Consumer<TunerDto>() {
           @Override
           public void accept(TunerDto tunerDto) {
-            System.out.println("listener callbacked with " + tunerDto);
+            System.out.println("listener2 callbacked with " + tunerDto);
           }
         };
     rxPlayerApi.addTunerChangedListener(listener1);
-    // rxPlayerApi.addTunerChangedListener(listener2);
+    rxPlayerApi.addTunerChangedListener(listener2);
     rxPlayerApi.requestAlbumForId(
         1,
         albumDto -> {
