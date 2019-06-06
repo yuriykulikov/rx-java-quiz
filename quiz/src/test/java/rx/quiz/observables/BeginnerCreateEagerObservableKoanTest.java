@@ -10,6 +10,6 @@ public class BeginnerCreateEagerObservableKoanTest extends BeginnerCreateEagerOb
     @NotNull
     @Override
     public Observable<String> createEagerObservableFromSupplier(@NotNull Supplier<String> supplier) {
-        return Observable.fromArray(supplier.get(), supplier.get(), supplier.get());
+        return Observable.just(supplier.get(), supplier.get(), supplier.get());
     }
 }
