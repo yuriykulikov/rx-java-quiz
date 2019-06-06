@@ -6,7 +6,6 @@ import io.reactivex.Scheduler;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 public class IntermediateCombineTimersKoanTest extends IntermediateCombineTimersKoan {
 
@@ -15,8 +14,7 @@ public class IntermediateCombineTimersKoanTest extends IntermediateCombineTimers
     protected ObservableTransformer<String, String> timeoutIfFirstElementDoesNotArriveIn(
             @NotNull Scheduler scheduler, long delay, @NotNull TimeUnit unit) {
         return upstream -> {
-            Observable<String> timeout = Observable.create(emitter ->
-                    scheduler.scheduleDirect(() -> emitter.onError(new TimeoutException()), delay, unit));
+            Observable<String> timeout = Observable.<String>never().timeout(delay, unit, scheduler);
 
             return upstream.ambWith(timeout);
         };
