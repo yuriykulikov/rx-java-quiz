@@ -11,7 +11,6 @@ public class BeginnerTerminalOperationsKoanTest extends BeginnerTerminalOperatio
         return numbers.stream()
                 .map(Integer::parseInt)
                 .filter(value -> value % 2 == 0)
-                .reduce(Integer::sum)
-                .orElse(0);
+                .reduce(0, Integer::sum);
     }
 }
