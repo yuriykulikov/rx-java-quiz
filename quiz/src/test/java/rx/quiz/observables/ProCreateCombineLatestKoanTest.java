@@ -38,17 +38,7 @@ public class ProCreateCombineLatestKoanTest extends ProCreateCombineLatestKoan {
 
             compositeDisposable.addAll(disposable, firstDisposable, secondDisposable);
 
-            emitter.setDisposable(new Disposable() {
-                @Override
-                public void dispose() {
-                    compositeDisposable.dispose();
-                }
-
-                @Override
-                public boolean isDisposed() {
-                    return compositeDisposable.isDisposed();
-                }
-            });
+            emitter.setDisposable(compositeDisposable);
         });
     }
 }
